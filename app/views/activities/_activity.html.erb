@@ -1,0 +1,16 @@
+<tr class="text-center" id="activity-<%= activity.id %>" >
+    <td><%= activity.name %></td>
+    <td>
+        <% if activity.status %>
+            completed
+        <% else %>
+            in-progress
+        <% end %>
+    </td>
+    <td> 
+        <% unless activity.status %>
+            <%= link_to "mark complete", activity_complete_path(activity), data: {turbo_method: :patch}, class: "btn btn-outline-info" %>
+        <% end %>
+        <%#= link_to :delete, organization, class: "btn btn-outline-danger", data: { turbo_method: :delete, turbo_confirm: "Are You Sure?"} %>                
+    </td>
+</tr>

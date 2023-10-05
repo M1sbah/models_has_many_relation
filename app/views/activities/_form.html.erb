@@ -1,0 +1,6 @@
+<div class="card mt-3" id="form">
+    <%= form_with model: @management.activities.build, url: url do |f| %>
+        <%= f.text_field  :name, class: "form-control mt-3 mx-auto", placeholder: "Activity name", style: "width: 90%;" %>
+        <%= f.submit class: "btn btn-primary mt-4 mx-3 mb-3"%>
+    <% end %>
+</div>

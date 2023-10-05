@@ -1,0 +1,7 @@
+<div class="card mt-5" id="form">
+    <%= form_with model: User.new, url: url do |f| %>
+        <%= f.text_field  :name, class: "form-control mt-3 mx-auto", placeholder: "Username", style: "width: 90%;" %>
+        <%= f.text_field  :address, class: "form-control mt-3 mx-auto", placeholder: "Address", style: "width: 90%;" %>    
+        <%= f.submit class: "btn btn-primary mt-4 mx-3 mb-3 col-lg-4"%>
+    <% end %>
+</div>

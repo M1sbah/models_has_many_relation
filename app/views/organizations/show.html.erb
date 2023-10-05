@@ -1,0 +1,30 @@
+<div class= "row">
+    <div class="col-lg-4 mt-5">
+        <div class="card">
+            <div class="card-title">
+                <h4 class = "text-center text-muted">Add Management</h4>
+            </div>
+            <div class="card-body">
+                <%= render 'managements/form', url: organization_managements_path(@organization) %>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="card mt-5">
+            <div class="col-lg-10 mx-auto mt-5">
+                <div class="card">
+                    <div class="card-title">
+                        <h3 class="text-center"> Organization Details </h3>
+                    </div>
+                    <div class="card-body">
+                        <h5>Organization Name:- <%= @organization.name %> </h5>
+                        <small><i class="bi bi-envelope-at" ></i> <%= @organization.email%> </small>
+                    </div>
+                </div>
+                <hr class= " mt-3 ">
+                <h4 class="text-center">Management</h4>
+                <%= render 'managements/managements_list', managements: @organization.managements %>
+            </div>
+        </div>
+    </div>
+</div>

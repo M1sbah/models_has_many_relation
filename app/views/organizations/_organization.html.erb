@@ -1,0 +1,8 @@
+<tr class="text-center" id="organization-<%= organization.id %>" >
+    <td><%= organization.name %></td>
+    <td><%= organization.email %></td>
+    <td> 
+        <%= link_to :show, organization, class: "btn btn-outline-info" %>
+        <%= link_to :delete, organization, class: "btn btn-outline-danger", data: { turbo_method: :delete, turbo_confirm: "Are You Sure?"} %>                
+    </td>
+</tr>

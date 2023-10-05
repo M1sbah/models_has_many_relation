@@ -1,0 +1,15 @@
+<table class="table mt-5" id="organizations-list">
+    <thead class="table table-primary text-center">
+        <th>Organization Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <% organizations.each do |organization| %>
+            <% if organization.persisted? %>
+                <%= render 'organizations/organization', organization: organization %>
+            <% end %>
+        <% end %>
+    </tbody>
+
+</table>

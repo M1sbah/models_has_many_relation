@@ -1,0 +1,15 @@
+<table class="table mt-5" id="managements-list">
+    <thead class="table table-primary text-center">
+        <th>Management Name</th>
+        <th>Contact</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <% managements.each do |management| %>
+            <% if management.persisted? %>
+                <%= render 'managements/management', management: management %>
+            <% end %>
+        <% end %>
+    </tbody>
+
+</table>

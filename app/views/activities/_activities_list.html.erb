@@ -1,0 +1,15 @@
+<table class="table mt-5" id="activities-list">
+    <thead class="table table-primary text-center">
+        <th>Activity Name</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <% activities.each do |activity| %>
+            <% if activity.persisted? %>
+                <%= render 'activities/activity', activity: activity %>
+            <% end %>
+        <% end %>
+    </tbody>
+
+</table>
